@@ -8,7 +8,6 @@ function App() {
   return (
       <div className="App">
           <Navbar/>
-          <h1 style={{color: 'red'}}>ghghg</h1>
           <Footer/> 
       </div>
   )
