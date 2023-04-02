@@ -16,10 +16,10 @@ function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  //Hacer un llamado a la API para traerte la lista de odontologos
+  //Hacer un llamado a la API para traer la lista de odontologos
   /* 
-  const odontologos = fetch(obtenes la lista de odontologos)
-  reemplazas lo de abajo por => const [odontologos, guardarOdontologo] = useState(odontologos)
+  const odontologos = fetch(obtener la lista de odontologos)
+  reemplazar lo de abajo por => const [odontologos, guardarOdontologo] = useState(odontologos)
   */
 
 
