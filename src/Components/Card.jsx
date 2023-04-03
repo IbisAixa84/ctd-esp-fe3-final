@@ -3,8 +3,7 @@ import React from "react";
 
 const Card = ({ name, username, id, odontologosFav, agregarOdontologoFav, odontologos}) => {
 
-  const miStorage = window.localStorage;
-
+  
   const addFav = id => {
     // Aqui iria la logica para agregar la Card en el localStorage
 
@@ -24,15 +23,18 @@ const Card = ({ name, username, id, odontologosFav, agregarOdontologoFav, odonto
   }
 
   return (
+    
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}
+        <img src={window.location.origin + '/images/doctor.jpg'} alt='DH-logo'  width={'90%'} height={'90%'}/>
            {name}<br></br>{username}<br></br>ID = {id} 
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={ () => addFav(id)} className="favButton">Add fav</button>
+        <button onClick={ () => addFav(id)} className="favButton"><img src={window.location.origin + '/images/estrella.png' }  alt='DH-logo' width={'10%'} /></button>
     </div>
   );
-};
+
+}
 
 export default Card;
