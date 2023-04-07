@@ -13,6 +13,7 @@ const Context = ({children}) => {
 
     return (
     <GlobalState.Provider></GlobalState.Provider>
+    )
 }
 
 export default Context
