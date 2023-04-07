@@ -3,6 +3,5 @@ export const routes = {
     contact: '/contact',
     detail: '/detail',
     favs: '/favs',
-    dentist: '/dentist',
     notFound: '*'
 }

@@ -5,21 +5,13 @@ import { useParams } from 'react-router-dom'
 
 function Detail({odontologos}) {
 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-  const dentistSelector = {
-    name: 'Ibis',
-    email: 'ibis@gmail.com',
-    phone: '1154545454',
-    website: 'www.ibis.com'
-  }
-
   const params = useParams()
 
   const odontSelected = odontologos.find((odontologo) => parseInt(params.id, 10) === odontologo.id )
 
   return (
     <div>
-        <h1>Detail Dentist id </h1>
+        <h1>Detail Dentist {odontSelected.id} </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
 
@@ -35,9 +27,9 @@ function Detail({odontologos}) {
       <tbody>
         <tr>
           <td>{odontSelected.name}</td>
-          <td>{dentistSelector.email}</td>
-          <td>{dentistSelector.phone}</td>
-          <td>{dentistSelector.website}</td>
+          <td>{odontSelected.email}</td>
+          <td>{odontSelected.phone}</td>
+          <td>{odontSelected.website}</td>
         </tr>
       </tbody>
       </table>
