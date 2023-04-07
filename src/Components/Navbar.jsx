@@ -13,7 +13,6 @@ const Navbar = () => {
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
         <Link to={routes.home}>Home</Link>
         <Link to={routes.contact}>Contact</Link>
-        <Link to={routes.detail}>Detail</Link>
         <Link to={routes.favs}>Favs</Link>
       <ThemeButton></ThemeButton>
     </nav>
