@@ -9,6 +9,8 @@ import Navbar from "./Components/Navbar"
 import React, {useState} from 'react'
 import {ThemeContext} from "./Components/ThemeContext"
 import "./App.css"
+import { routes } from './routes'
+import NotFound from './Routes/NotFound'
 
 function App() {
   
@@ -41,11 +43,12 @@ function App() {
       <div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
         <Navbar/>
           <Routes>
-            <Route path='/' element={<Home odontologos={odontologos} odontologosFav={odontologosFav} agregarOdontologoFav={agregarOdontologoFav}/>}/>
-              <Route path='/contact' element={<Contact/>}/>
-              <Route path='/detail/:id' element={<Detail/>}/>
-              <Route path='/favs/' element={<Favs/>}/>
-          </Routes>        
+            <Route path={routes.home} element={<Home odontologos={odontologos} odontologosFav={odontologosFav} agregarOdontologoFav={agregarOdontologoFav}/>}/>
+            <Route path={routes.contact} element={<Contact/>}/>
+            <Route path={routes.detail} element={<Detail/>}/>
+            <Route path={routes.favs} element={<Favs/>}/>
+            <Route path={routes.notFound} element={<NotFound/>}/>
+          </Routes>            
         <Footer/> 
       </div>
   )

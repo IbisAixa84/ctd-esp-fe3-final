@@ -48,7 +48,7 @@ const Form = () => {
        <button>Send</button>
     </form>
     {err}
-    {mensaje ? <h2>Gracias {user.name}, te contactaremos cuando antes vía mail</h2> : <h2></h2>} 
+    {mensaje ? <h2>Gracias {user.name}, te contactaremos cuando antes vía mail</h2> : <h2> </h2>} 
 
     </div>
   )
