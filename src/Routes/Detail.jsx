@@ -1,10 +1,10 @@
 import React from 'react'
-
+import { useParams } from 'react-router-dom'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-const Detail = () => {
- 
+function Detail({odontologos}) {
+
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const dentistSelector = {
     name: 'Ibis',
@@ -13,9 +13,13 @@ const Detail = () => {
     website: 'www.ibis.com'
   }
 
+  const params = useParams()
+
+  const odontSelected = odontologos.find((odontologo) => parseInt(params.id, 10) === odontologo.id )
+
   return (
-    <>
-      <h1>Detail Dentist id </h1>
+    <div>
+        <h1>Detail Dentist id </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
 
@@ -30,14 +34,14 @@ const Detail = () => {
       </thead>
       <tbody>
         <tr>
-          <td>{dentistSelector.name}</td>
+          <td>{odontSelected.name}</td>
           <td>{dentistSelector.email}</td>
           <td>{dentistSelector.phone}</td>
           <td>{dentistSelector.website}</td>
         </tr>
       </tbody>
       </table>
-    </>
+    </div>
   )
 }
 

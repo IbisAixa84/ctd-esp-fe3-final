@@ -1,4 +1,4 @@
-import { useReducer, useContext } from 'react'
+import { useContext } from 'react'
 import { Route, Routes } from "react-router-dom"
 import Home from "./Routes/Home"
 import Contact from "./Routes/Contact"
@@ -45,7 +45,8 @@ function App() {
           <Routes>
             <Route path={routes.home} element={<Home odontologos={odontologos} odontologosFav={odontologosFav} agregarOdontologoFav={agregarOdontologoFav}/>}/>
             <Route path={routes.contact} element={<Contact/>}/>
-            <Route path={routes.detail} element={<Detail/>}/>
+            <Route path={routes.detail} element={<Detail odontologos={odontologos}/>}/>
+            <Route path={routes.detail + '/:id'} element={<Detail odontologos={odontologos}/>}/>
             <Route path={routes.favs} element={<Favs/>}/>
             <Route path={routes.notFound} element={<NotFound/>}/>
           </Routes>            
