@@ -1,6 +1,11 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useReducer, useState } from 'react'
+import { themeReducer } from './themeReducer';
 
 const GlobalState = createContext()
+
+const initialState = {
+    darkMode: false,
+  };
 
 const Context = ({children}) => {
     
@@ -10,6 +15,8 @@ const Context = ({children}) => {
     const listaFavoritos = !favoritos || favoritos ==='' || favoritos === undefined ? [] : JSON.parse(favoritos);
 
     const [odontologosFav, agregarOdontologoFav] = useState(listaFavoritos)
+
+    const [state, dispatch] = useReducer(themeReducer, initialState);
 
     const url = 'https://jsonplaceholder.typicode.com/users'
 
@@ -24,7 +31,7 @@ const Context = ({children}) => {
     }, [odontologosFav])
 
     return (
-      <GlobalState.Provider value={{odontologos, odontologosFav, agregarOdontologoFav}}>
+      <GlobalState.Provider value={{odontologos, odontologosFav, agregarOdontologoFav, state, dispatch}}>
         {children}
       </GlobalState.Provider>
     )
