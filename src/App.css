@@ -1,5 +1,14 @@
 /* General Styles */
 
+/* .centered{
+  text-align: center;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
 .bg {
     height: 100vh;
     padding: 50px;
@@ -27,7 +36,7 @@
     transition: 0.2s all linear;
   }
   
-  /* Light Mode Styles */
+  /* Light Mode Styles */ */
   
   .bg-light {
     background-color: #fff;
@@ -73,4 +82,5 @@
     flex-wrap: wrap;
     gap: 15px;
     justify-content: flex-start;
+    
   }

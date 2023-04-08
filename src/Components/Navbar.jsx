@@ -11,9 +11,9 @@ const Navbar = () => {
       <h2>DH Odonto</h2>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <Link to={routes.home}>Home</Link>
-        <Link to={routes.contact}>Contact</Link>
-        <Link to={routes.favs}>Favs</Link>
+        <Link to={routes.home}><h4>Home</h4></Link>
+        <Link to={routes.contact}><h4>Contact</h4></Link>
+        <Link to={routes.favs}><h4>Favs</h4></Link>
         <ThemeButton></ThemeButton>
     </nav>
   )

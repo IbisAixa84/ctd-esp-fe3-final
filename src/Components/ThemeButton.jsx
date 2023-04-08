@@ -18,9 +18,7 @@ export default function SwitchButton() {
 
   return (
     <button className={`btn ${darkMode ? "btn-dark" : "btn-light"}`} onClick={onClick}>
-        {/* {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}  */}
-     Change theme
-     
+        {darkMode ? <>☀️</> : <>🌙</>}         
     </button>
   );
 }
