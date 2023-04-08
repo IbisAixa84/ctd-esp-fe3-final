@@ -37,9 +37,13 @@
   }
   
   /* Light Mode Styles */ */
+  .navi{
+    display: flex;
+  }
   
   .bg-light {
     background-color: #fff;
+    color: #000;
   }
   
   .heading-light {
@@ -61,6 +65,12 @@
   
   .bg-dark {
     background-color: #222;
+    color: #fff;
+  }
+
+  .bg-dark-nav {
+    background-color: black;
+    color: #fff;
   }
   
   .heading-dark {
