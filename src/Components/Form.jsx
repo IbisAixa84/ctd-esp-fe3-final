@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React from "react"
+import { useState } from "react"
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
-
+ 
   const [user, setUser] = useState({
     name: '',
     email: ''

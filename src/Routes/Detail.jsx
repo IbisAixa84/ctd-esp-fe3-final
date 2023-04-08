@@ -1,8 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 function Detail({odontologos}) {
 
   const params = useParams()
@@ -12,8 +10,6 @@ function Detail({odontologos}) {
   return (
     <div>
         <h1>Detail Dentist {odontSelected.id} </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
 
       <table>
         <thead>

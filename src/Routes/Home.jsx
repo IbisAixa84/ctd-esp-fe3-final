@@ -1,8 +1,6 @@
 import React from 'react'
 import Card from '../Components/Card'
-import { useGlobalState } from '../Components/utils/Context'
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { useGlobalState } from '../Components/utils/global.context'
 
 const Home = () => {
 
@@ -11,7 +9,6 @@ const Home = () => {
   return (
     <div className="" >
       <h1>Home</h1>
-        {/* Aqui deberias renderizar las cards */}
         <div className='card-grid'>
           {odontologos.map(odontologo =>(
           <Card
@@ -21,7 +18,6 @@ const Home = () => {
             id={odontologo.id}
           />
           ))}
-
         </div>
     </div>
   )

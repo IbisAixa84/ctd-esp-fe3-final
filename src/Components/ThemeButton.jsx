@@ -1,6 +1,6 @@
-import React from "react";
-import "../App";
-import { useGlobalState } from "./utils/Context";
+import React from "react"
+import "../App"
+import { useGlobalState } from "./utils/global.context"
 
 
 export default function SwitchButton() {

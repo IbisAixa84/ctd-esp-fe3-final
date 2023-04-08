@@ -20,6 +20,15 @@ code {
   margin-bottom: 8px
 }
 
+.favButtonAlt{
+  background-color: blue;
+  padding: 10px;
+  border: none;
+  width: 93%;
+  cursor: pointer;
+  margin-bottom: 8px
+}
+
 h1{
   text-align: center;
 }

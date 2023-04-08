@@ -9,7 +9,7 @@ import React from 'react'
 import "./App.css"
 import { routes } from './routes'
 import NotFound from './Routes/NotFound'
-import { useGlobalState } from './Components/utils/Context'
+import { useGlobalState } from './Components/utils/global.context'
 
 function App() {
 
