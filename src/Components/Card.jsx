@@ -39,11 +39,13 @@ const Card = ({ name, username, id}) => {
         <Link className={`navi ${darkMode ? "bg-dark-nav" : "bg-light"}`} key={id} to={routes.detail + '/' + id} >{name}</Link>
         <br></br>{username}<br></br><br></br>
         <button className={`${mouseOver ? "favButtonAlt" : "favButton"}`} 
-                onClick={ () => addFav(id)} ><img src={window.location.origin + '/images/estrella.png' } 
+                onClick={ () => addFav(id)} 
                 onMouseOver={ change }
-                onMouseOut={ change }
-                alt='DH-logo' width={'10%'} 
-        /></button>
+                onMouseOut={ change }>
+                <img src={window.location.origin + '/images/estrella.png' } 
+                alt='DH-logo' width={'10%'}
+                />
+        </button>
     </div>
   );
 
