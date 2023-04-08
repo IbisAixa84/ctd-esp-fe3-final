@@ -1,42 +1,5 @@
-/* General Styles */
-
-/* .centered{
-  text-align: center;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-.bg {
-    height: 100vh;
-    padding: 50px;
-    overflow: hidden;
-    transition: 0.2s all linear;
-  }
+ 
   
-  .heading {
-    text-transform: uppercase;
-    transition: 0.2s all linear;
-  }
-  
-  .btn {
-    border: none;
-    padding: 10px 30px;
-    border-radius: 4px;
-    margin-top: 20px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.2s all linear;
-  }
-  
-  .para {
-    width: 70vw;
-    transition: 0.2s all linear;
-  }*/
-  
-  /* Light Mode Styles */
   .navi{
     display: flex;
   }
@@ -61,7 +24,6 @@
     cursor: pointer;
   }
   
-  /* Dark Mode Styles */
   
   .bg-dark {
     background-color: #222;
