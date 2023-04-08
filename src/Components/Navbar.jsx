@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navi ${darkMode ? "bg-dark-nav" : "bg-light"}`}>
-      <h2>DH Odonto</h2>
+      <h2><span class="drop-cap">D</span>H Odonto</h2>
       <div className={`navi ${darkMode ? "bg-dark-nav" : "bg-light"}`}>
         <Link className={`navi ${darkMode ? "bg-dark-nav" : "bg-light"}`} to={routes.home}><h4>Home</h4></Link>
         <Link className={`navi ${darkMode ? "bg-dark-nav" : "bg-light"}`} to={routes.contact}><h4>Contact</h4></Link>

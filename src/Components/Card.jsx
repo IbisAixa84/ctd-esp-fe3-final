@@ -37,7 +37,7 @@ const Card = ({ name, username, id}) => {
     <div className="card">
         <img src='/images/doctor.jpg' alt='DH-logo'  width={'90%'} height={'90%'}/>
         <Link className={`navi ${darkMode ? "bg-dark-nav" : "bg-light"}`} key={id} to={routes.detail + '/' + id} >{name}</Link>
-        <br></br>{username}<br></br>ID = {id} 
+        <br></br>{username}<br></br><br></br>
         <button className={`${mouseOver ? "favButtonAlt" : "favButton"}`} 
                 onClick={ () => addFav(id)} ><img src={window.location.origin + '/images/estrella.png' } 
                 onMouseOver={ change }
