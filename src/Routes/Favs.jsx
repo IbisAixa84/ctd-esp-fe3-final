@@ -1,8 +1,13 @@
 import React from "react";
+import { useGlobalState } from "../Components/utils/Context";
+import Card from "../Components/Card";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
+
+  const {odontologosFav} = useGlobalState()
+
 
   return (
     <>
@@ -10,6 +15,15 @@ const Favs = () => {
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
+        {odontologosFav.map(odontologo =>(
+          <Card
+            key={odontologo.id}
+            name={odontologo.name}
+            username={odontologo.username}
+            id={odontologo.id}
+          />
+          ))}
+
       </div>
     </>
   );

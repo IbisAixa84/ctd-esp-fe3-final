@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link to={routes.home}>Home</Link>
         <Link to={routes.contact}>Contact</Link>
         <Link to={routes.favs}>Favs</Link>
-      <ThemeButton></ThemeButton>
+      {/* <ThemeButton></ThemeButton> */}
     </nav>
   )
 }

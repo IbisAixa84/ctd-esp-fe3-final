@@ -1,11 +1,15 @@
 import React from 'react'
 import Card from '../Components/Card'
+import { useGlobalState } from '../Components/utils/Context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-const Home = ({odontologos, odontologosFav, agregarOdontologoFav}) => {
+const Home = () => {
+
+  const {odontologos} = useGlobalState()
+
   return (
-    <main className="" >
+    <div className="" >
       <h1>Home</h1>
         {/* Aqui deberias renderizar las cards */}
         <div className='card-grid'>
@@ -15,14 +19,11 @@ const Home = ({odontologos, odontologosFav, agregarOdontologoFav}) => {
             name={odontologo.name}
             username={odontologo.username}
             id={odontologo.id}
-            odontologosFav={odontologosFav}
-            agregarOdontologoFav={agregarOdontologoFav}
-            odontologos={odontologos}
           />
           ))}
 
         </div>
-    </main>
+    </div>
   )
 }
 

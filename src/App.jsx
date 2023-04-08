@@ -11,34 +11,22 @@ import {ThemeContext} from "./Components/ThemeContext"
 import "./App.css"
 import { routes } from './routes'
 import NotFound from './Routes/NotFound'
+import { useGlobalState } from './Components/utils/Context'
 
 function App() {
   
-  const theme = useContext(ThemeContext);
-  const darkMode = theme.state.darkMode;
+  // const theme = useContext(ThemeContext);
+  // const darkMode = theme.state.darkMode;
 
-  const [odontologos, setOdontologo] = useState([]) 
-
-  const url = 'https://jsonplaceholder.typicode.com/users'
-
-  let favoritos = localStorage.getItem('favoritos');
-
-  const listaFavoritos = favoritos ==='' || favoritos === undefined ? [] : JSON.parse(favoritos);
-
-  const [odontologosFav, agregarOdontologoFav] = useState(listaFavoritos)
-
-  useEffect( () => {
-    fetch(url)
-    .then(response => response.json())
-    .then(data => setOdontologo(data))
-  }, [])
+  const {odontologos} = useGlobalState()
 
   return (
      
-      <div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
+      <div className='app'>
+        {/* {`bg ${darkMode ? "bg-dark" : "bg-light"}`}> */}
         <Navbar/>
           <Routes>
-            <Route path={routes.home} element={<Home odontologos={odontologos} odontologosFav={odontologosFav} agregarOdontologoFav={agregarOdontologoFav}/>}/>
+            <Route path={routes.home} element={<Home/>}/>
             <Route path={routes.contact} element={<Contact/>}/>
             <Route path={routes.detail} element={<Detail odontologos={odontologos}/>}/>
             <Route path={routes.detail + '/:id'} element={<Detail odontologos={odontologos}/>}/>
